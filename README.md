@@ -22,4 +22,4 @@ A dynamic and interactive web application built with React that visually demonst
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/Saurabh-More/sorting-visualizer-react.git
