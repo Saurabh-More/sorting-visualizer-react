@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: max-content;
+}
+.btn:hover {
+  border-color: #646cff;
+  padding: 0.7em 1.3em;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.container {
+  width: 99vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.sort-container {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  position: relative;
+  left: 10px;
+}
+
+.controller {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-class {
+  height: 40vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+  }
+  .sort-container {
+    height: 80vh;
+  }
+  .container > * {
+    width: 90%;
+  }
+  .button-class {
+    height: 35vh;
+  }
+  .controller {
+    justify-content: left;
+  }
+}
+
+/* SortingStatusMessage.css */
+
+.status-message {
+  position: fixed;
+  top: 100px;
+  left: 30%;
+  transform: translateX(-50%);
+  background-color: #9c2b2e; /* Intuitive green color */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  opacity: 0;
+  transform: translateY(20px); /* Start from below */
+  transition: opacity 0.5s ease-in-out;
+  animation: slide-up 0.5s forwards;
+  z-index: 1000; /* Ensure it appears on top of other content */
+}
+
+.status-message.show {
+  opacity: 1;
+  transform: translateY(0); /* Move to final position */
+}
+
+.status-message.hide {
+  opacity: 0;
+  animation: slide-down 0.5s forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start position */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End position */
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 1;
+    transform: translateY(0); /* Start position */
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px); /* End position */
+  }
+}
+
+/* RangeSlider.css */
+
+.range-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  width: 250px;
+}
+
+.range-slider label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.range-slider input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: turquoise; /* Intuitive green color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-slider input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: turquoise; /* Intuitive green color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-slider input[type="range"]::-webkit-slider-thumb:hover {
+  width: 24px;
+  height: 24px;
+}
+
+.range-slider input[type="range"]:hover {
+  opacity: 1;
+}
+
+/*Random array generator*/
+
+.rand-class {
+  margin: 10px;
+}
+
+.rand-class-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rand-btn {
+  flex: 1 1 100%;
+  margin-left: 30%;
+  margin-right: 44%;
+  text-align: center;
+}
+
+.inpt {
+  padding: 5px;
+  width: 50px;
+}
+
+/* Tooltip */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 8px; /* Adjust spacing between button and tooltip */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px; /* Adjust width as needed */
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the button */
+  left: 50%;
+  margin-left: -150px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: pre-wrap; /* Allows for multi-line text */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
