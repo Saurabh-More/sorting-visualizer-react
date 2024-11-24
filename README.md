@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-[Click here](https://gavhanebhairu7.github.io/sorting-visualizer-react/) to access the live site.
+[Click here](https://) to access the live site.
 
 A dynamic and interactive web application built with React that visually demonstrates various sorting algorithms. This project allows users to input an array of numbers, choose from different sorting algorithms, and watch as the array is sorted step-by-step with animations.
 
@@ -22,4 +22,4 @@ A dynamic and interactive web application built with React that visually demonst
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/gavhanebhairu7/sorting-visualizer-react.git
+   git clone https://github.com/

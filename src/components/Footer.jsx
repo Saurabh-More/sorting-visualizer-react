@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer style={footerStyle}>
-      <p>&copy; {currentYear} Designed and Developed by Bhairav</p>
+      <p>&copy; {currentYear} Designed and Developed by Saurabh</p>
     </footer>
   )
 }

@@ -23,13 +23,6 @@ const Header = () => {
     margin: 0, // Remove default margin
   }
 
-  const subtitleStyle = {
-    fontSize: "16px", // Font size for the subtitle
-    color: "#a66cff", // Light gray color for subtitle
-    margin: 0, // Remove default margin
-    marginLeft: "30px",
-  }
-
   const imgStyle = {
     height: "50px",
   }
@@ -41,7 +34,6 @@ const Header = () => {
         style={imgStyle}></img>
       <div style={brandStyle}>
         <h1 style={titleStyle}>Sort Lab</h1>
-        <p style={subtitleStyle}>...your sorting mate</p>
       </div>
     </header>
   )
