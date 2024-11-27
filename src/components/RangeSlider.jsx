@@ -1,9 +1,11 @@
 import React, { useState } from "react"
 
-const RangeSlider = ({ min = 11, max = 1100, step = 1, initialValue = 880, setTime, disable }) => {
-  const [value, setValue] = useState(initialValue)
-  setTime(1100 - value)
-  const handleChange = (event) => {
+const RangeSlider = ({ min = 11, max = 1100, step = 1, initialValue = 880, setTime, disable }) => 
+{
+  const [value, setValue] = useState(initialValue);
+  setTime(1100 - value);
+  const handleChange = (event) => 
+  {
     setValue(event.target.value)
     setTime(1100 - value)
   }
